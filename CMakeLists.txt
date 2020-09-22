@@ -5,6 +5,10 @@ add_definitions(-std=c++17)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
-project(HelloWorld)
+project(kalmanTest)
 
-add_executable(HelloWorld src/main.cpp)
+set(EIGEN_INC_DIR /usr/include/eigen-3.2.10/)
+include_directories(${EIGEN_INC_DIR})
+
+set(SOURCE_FILES src/KalmanFilter.cpp src/KalmanFilter_test.cpp)
+add_executable(kalmanTest ${SOURCE_FILES})

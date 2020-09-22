@@ -27,9 +27,11 @@ void KalmanFilter::update(const Eigen::VectorXd &y, const Eigen::VectorXd &u)
     // prediction step
     xhatNext = A * xHat + B * u;
     P = A * P * A.transpose() + Q;
+    std::cout << "P now is: " << P << std::endl;
 
     // correction step
     K = P * C.transpose() * (C * P * C.transpose() + R).inverse();
+    std::cout << "K now is: " << K << std::endl;
     xhatNext += K * (y - C * xhatNext);
     P =  (I - K * C) * P;
 
