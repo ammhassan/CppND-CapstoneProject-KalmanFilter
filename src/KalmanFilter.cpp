@@ -13,6 +13,21 @@ KalmanFilter::KalmanFilter(const Eigen::MatrixXd &A, const Eigen::MatrixXd &B,
     std::cout << "Kalman filter object has been constructed." << std::endl;
 }
 
+Eigen::VectorXd KalmanFilter::getState()
+{
+    return xHat;
+}
+
+Eigen::VectorXd KalmanFilter::getEstimatedOutput()
+{
+    return C * xHat;
+}
+
+double KalmanFilter::getTime()
+{
+    return time;
+}
+
 void KalmanFilter::init(const Eigen::VectorXd &x0)
 {
     I.setIdentity();

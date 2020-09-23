@@ -18,15 +18,9 @@ class KalmanFilter
     void update(const Eigen::VectorXd &y, const Eigen::VectorXd &u);
 
     // getters
-    Eigen::VectorXd getState()
-    {
-        return xHat;
-    }
-
-    double getTime()
-    {
-        return time;
-    }            
+    Eigen::VectorXd getState();
+    Eigen::VectorXd getEstimatedOutput();
+    double getTime();           
 
     private:
     // time and sampleTime

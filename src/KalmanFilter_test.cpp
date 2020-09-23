@@ -2,11 +2,11 @@
 #include "KalmanFilter.h"
 #include "helperFunc.h"
 
-const std::string dataSetPath{"../data/aircraft_pitch_dynamics_data.txt"};
 
 int main()
 {
     // define the subject dynamic system
+    const std::string dataSetPath{"../data/aircraft_pitch_dynamics_data.txt"};
     int nStates = 2;
     int nInputs = 1;
     int nOutputs = 1;
@@ -57,6 +57,9 @@ int main()
     std::cout << "x0: " << x0 << std::endl;
     kf.init(x0);
 
+    // define a vector to hold the estimated output
+    Eigen::VectorXd estimatedOutput(dataSetSize);
+
     // run the filter on the data set of I/O
     Eigen::VectorXd y(nOutputs);
     Eigen::VectorXd u(nInputs);
@@ -69,6 +72,8 @@ int main()
 
         kf.update(y, u);
 
+        estimatedOutput(i) = kf.getEstimatedOutput()(0);
+
         // print state estimate at the current time step
         std::cout << "State estimate at step " << i << " is: " << kf.getState() << std::endl;
     }
@@ -78,5 +83,6 @@ int main()
     std::cout << "Estimation error percentage at the end time step is " << 
     (trueOutput(trueOutput.size()-1) - kf.getState()(1))/ trueOutput(trueOutput.size()-1) * 100.0 << std::endl;
 
-
+    // compute mean square error for the estimated output
+    std::cout << "Mean square error is: " << computeMSE(trueOutput, estimatedOutput) << std::endl;
 }
