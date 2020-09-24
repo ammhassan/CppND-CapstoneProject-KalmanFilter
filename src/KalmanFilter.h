@@ -8,8 +8,9 @@ class KalmanFilter
     public:
     // constructor
     KalmanFilter(const Eigen::MatrixXd &A, const Eigen::MatrixXd &B,
-                const Eigen::MatrixXd &C, const Eigen::MatrixXd &Q,
-                const Eigen::MatrixXd &R, const Eigen::MatrixXd &P, double dt);
+                 const Eigen::MatrixXd &C, const Eigen::MatrixXd &Q,
+                 const Eigen::MatrixXd &R, const Eigen::MatrixXd &P0,
+                 const double dt);
 
     // filter initializer
     void init(const Eigen::VectorXd &x0);
@@ -49,6 +50,5 @@ class KalmanFilter
     Eigen::VectorXd xHat;
     Eigen::VectorXd xhatNext;
 };
-
 
 #endif

@@ -18,7 +18,7 @@ void loadDataSet(std::string path, Eigen::VectorXd &input, Eigen::VectorXd &true
       while (linestream >> time >> u >> yTrue >> yMeasured) {
         if (time == "time") 
         {
-          // first line that has the columns legends - do not parse data
+          // first line that has the columns titles - do not parse data
         }
         else 
         {
@@ -33,7 +33,7 @@ void loadDataSet(std::string path, Eigen::VectorXd &input, Eigen::VectorXd &true
   }
 }
 
-// This function computes the mean square error between the true (clean) output and the estimated one
+// This function computes the mean square error between the true (clean) output and the estimated one.
 float computeMSE(Eigen::VectorXd &trueOutput, Eigen::VectorXd &estimatedOutput)
 {
     float meanSquareError = 0.0;
