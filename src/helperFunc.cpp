@@ -29,7 +29,7 @@ void loadDataSet(std::string path, Eigen::VectorXd &input, Eigen::VectorXd &true
         }
       }
     }
-    std::cout << "Dataset has been loaded" << std::endl;
+    std::cout << "Dataset has been loaded." << std::endl;
   }
 }
 

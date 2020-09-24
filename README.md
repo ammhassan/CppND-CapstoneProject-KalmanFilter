@@ -28,7 +28,7 @@ This is the project repository for the Capstone project in the [Udacity C++ Nano
 
 ### Background
 The objective of this project is to implement Kalman filter in C++ and test it on an aircraft simulation dataset.
-Kalmnan filter is used to estimate a dynamic system's states from noisy measurments. More details on Kalman filter can be found [here](https://books.google.com/books?hl=en&lr=&id=UiMVoP_7TZkC&oi=fnd&pg=PR3&dq=+Dan+Simon+-+Optimal+State+Estimation_+Kalman,+H+Infinity,+and+Nonlinear+Approaches+&ots=L1Gf1DLgtg&sig=SzaCp18NVabM3_y-_tNOuYEz2Bc#v=onepage&q=Dan%20Simon%20-%20Optimal%20State%20Estimation_%20Kalman%2C%20H%20Infinity%2C%20and%20Nonlinear%20Approaches&f=false) and [here](http://www.cs.unc.edu/~welch/media/pdf/kalman_intro.pdf).
+Kalman filter is used to estimate a dynamic system's states from noisy measurments. More details on Kalman filter can be found [here](https://books.google.com/books?hl=en&lr=&id=UiMVoP_7TZkC&oi=fnd&pg=PR3&dq=+Dan+Simon+-+Optimal+State+Estimation_+Kalman,+H+Infinity,+and+Nonlinear+Approaches+&ots=L1Gf1DLgtg&sig=SzaCp18NVabM3_y-_tNOuYEz2Bc#v=onepage&q=Dan%20Simon%20-%20Optimal%20State%20Estimation_%20Kalman%2C%20H%20Infinity%2C%20and%20Nonlinear%20Approaches&f=false) and [here](http://www.cs.unc.edu/~welch/media/pdf/kalman_intro.pdf).
 
 The input to this filter is a discrete-time linear system on this form <br />
 x(k+1) = A * x(k) + B * u(k) + w(k) <br />
@@ -39,7 +39,7 @@ where x is the state vector, A is the dynamics matrix, B is control input matrix
 This project is composed of the follwing elements:
 1. The kalman filter class which is defined in `KalmanFilter.h` and `KalmanFilter.cpp`.
 2. A few helper functions defined in `helperFunc.h` and `helperFunc.cpp`.
-3. A test file (`KalmanFilter_test.cpp`) which has the main function.
+3. A test file (`KalmanFilter_test.cpp`) which has the main function and test the filter on an aircaft simulation dataset.
 
 ### Expected Behavior
 The expected output from this program looks like this: <br />
