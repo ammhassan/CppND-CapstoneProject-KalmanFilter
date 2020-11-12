@@ -50,18 +50,4 @@ The expected output from this program looks like this: <br />
 `Finished` <br />
 `Mean square error is: 8.06016e-07` <br />
 
-## Targeted Rubric Points
-1. Loops, Functions, I/O: The project demonstrates an understanding of C++ functions and control structures. <br />
-See `helperFunc.h`,&nbsp; `helperFunc.cpp` and `KalmanFilter_test.cpp`. <br />
-2. Loops, Functions, I/O: The project reads data from a file and process the data, or the program writes data to a file. <br />
-See `loadDataSet` function in `helperFunc.cpp`. <br />
-3. Object Oriented Programming: The project uses Object Oriented Programming techniques. <br />
-See class `KalmanFilter` in `KalmanFilter.h` and `KalmanFilter.cpp`. <br />
-4. Object Oriented Programming: Classes use appropriate access specifiers for class members. <br />
-See `KalmanFilter.cpp` line 16--29. <br />
-5. Object Oriented Programming: Class constructors utilize member initialization lists. <br />
-See `KalmanFilter.cpp` line 4--12. <br />
-6. Object Oriented Programming: Classes abstract implementation details from their interfaces. <br />
-See `KalmanFilter.cpp` line 31--54. <br />
-7. Memory Management: The project makes use of references in function declarations. <br />
-See `KalmanFilter.h` line 10--18.
+.
